@@ -1,0 +1,253 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url(images/back3.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container__title {
+    color: white;
+    font-size: 3.7rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 60%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgb(255, 255, 255, 0.9);
+    border: 1px solid  rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc38; 
+    padding: 4rem 0 1rem 0;
+}
+
+.card {
+    position: relative;
+    margin: 2rem;
+}
+
+.front {
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: #fff;
+    box-shadow: -5px -5px 5px rgba(61, 67, 80, 0.5), 5px 5px 5px rgba(61, 67, 80, 0.5);
+}
+
+.front__block {
+    position: relative;
+}
+
+.front img {
+    /* width: 300px;*/
+    width: 80%;
+    height: 350px;
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    padding: 0.3rem;
+    border: none;
+    color: white;
+    background-color: rgba(81, 121, 94, 0.6);
+    font-size: 1.2rem;
+    width: 150px;
+    cursor: pointer;
+}
+
+.front__text {
+    color: rgb(78, 78, 78);
+    margin: 0.9rem 0rem 0rem 0.3rem;
+    text-align: start;
+    max-width: 95%;
+}
+
+.back {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 450px;
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: #fff;
+    box-shadow: -5px -5px 5px rgba(61, 67, 80, 0.5), 5px 5px 5px rgba(61, 67, 80, 0.5);
+    transform: rotateY(180deg);
+    padding: 2rem;
+}
+
+.back__text {
+    text-align: center;
+    margin-bottom: 1.1rem;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #51795e;
+}
+
+.back li {
+    list-style: none;
+    display: flex;
+	justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: rgba(78, 78, 78, 0.901);
+    margin-bottom: 0.4rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.btn_bottom-space {
+    bottom: 15%;
+}
+
+@media all and (max-width: 1025px) {
+    .container {
+        height: 35vh;
+    }
+
+    .w {
+        width: 85%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .container__title {
+        font-size: 2.5rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .container {
+        height: 45vh;
+    }
+
+    .container__title {
+        font-size: 2rem;
+    }
+
+    input {
+        width: 75%;
+    }
+
+    .wrapper {
+        padding-top: 2rem;
+    }
+
+    .front, .back {
+        width: 320px;
+        height: 420px;
+    }
+
+    .front img {
+        height: 320px;
+    }
+
+    .back {
+        padding: 1.5rem;
+    }
+
+    .back li {
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+}
+
+@media all and (max-width: 321px) {
+    .container__title {
+        font-size: 1.8rem;
+    }
+
+    .front, .back {
+        width: 280px;
+        height: 380px;
+    }
+
+    .front img {
+        height: 280px;
+    }
+
+    .btn {
+        padding: 0.2rem;
+    }
+
+    .back {
+        padding: 1.3rem;
+    }
+
+    .back__text {
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (max-width: 916px) and (orientation: landscape) {
+    .container {
+        height: 60vh;
+    }
+
+    .container__title {
+        font-size: 2.7rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .wrapper {
+        padding-top: 2rem;
+    }
+
+    .back li {
+        font-weight: 500;
+    }
+}
+
+@media all and (max-width: 569px) and (orientation: landscape) {
+    .container__title {
+        font-size: 2.1rem;
+    }
+
+    .front, .back {
+        width: 350px;
+        height: 450px;
+    }
+
+    .front img {
+        height: 350px;
+    }
+}
